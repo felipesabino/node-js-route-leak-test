@@ -1,4 +1,8 @@
 var express = require('express');
+var memwatch = require('memwatch');
+
+memwatch.on('leak', function(info) { console.log(JSON.stringify(info))});
+
 var app = express();
 
 app.listen(9001);
@@ -15,10 +19,10 @@ app.get('/leak', function(req, res) {
     noop(bigObject);
 
     // uncomment me for no leak?
-    // res.json(200, {});
+    res.json(200, {});
   }, 1000)
 
   // uncomment me for leak?
-  res.json(200, {});
+  // res.json(200, {});
 
 })
