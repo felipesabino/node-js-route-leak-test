@@ -10,6 +10,7 @@
   "license": "MIT",
   "dependencies": {
     "express": "3.4.7",
-    "memwatch": "^0.2.2"
+    "memwatch": "^0.2.2",
+    "toobusy": "^0.2.4"
   }
 }
